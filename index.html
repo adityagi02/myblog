@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Aditya Tyagi</title>
+    <meta name="description" content="I'm Aditya Tyagi." />
+    <meta name="author" content="Aditya Tyagi" />
+
+    <meta property="og:title" content="A Basic HTML5 Template" />
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:url"
+      content="https://www.sitepoint.com/a-basic-html5-template/"
+    />
+    <meta
+      property="og:description"
+      content="A simple HTML5 Template for new projects."
+    />
+    <meta property="og:image" content="image.png" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="asset/css/styles.css" />
+  </head>
+
+  <body>
+    <div id="modals">
+      <div data-mi="11m" class="modal">
+        <p>It's been stormy seas last few years. How are you doing?</p>
+        <div class="bgroup">
+          <p data-o="b12" data-md="11m">Well!</p>
+          <p data-o="a12" data-md="11m">Not so good.</p>
+        </div>
+      </div>
+      <div data-mi="21m" class="window tall">
+        <div class="header">
+          <button>≡</button>
+          <small>Profile: Aditya Tyagi</small>
+        </div>
+
+        <p>
+          I'm a <b>Computer Science</b> student at Indian Institute of Information Technology, Kottayam, India that's
+          been learning everything life is giving as a surprise. I've a keen interest in <b> History </b> and <b>Archeology</b> also.
+        </p>
+        <p>
+          Right now, I'm reading <b>Twelfth Night</b> by <b>William Shakespeare</b> and listening to
+          <b>Mohd. Rafi.</b>
+        </p>
+
+        <p>
+          I'm looking for my next challenge—if you're working on a tough idea in
+          DeFi, Web3 or deep tech, give me a shout at
+          <a href="mailto:adityatyagi20bcs126@iiitkottayam.ac.in" class="outlink-w">hey@Aditya</a>!
+        </p>
+      </div>
+      <div id="ghost-modal" data-mi="ghost" class="window">
+        <div class="header">
+          <button>≡</button>
+          <small>Posts</small>
+        </div>
+        <p style="font-size: small">
+          Here's a selection of some of my favourite writings:
+        </p>
+        <p id="ghost-loading">Loading...</p>
+      </div>
+      <div data-mi="projects" class="window">
+        <div class="header">
+          <button>≡</button>
+          <small>Projects</small>
+        </div>
+        <p style="font-size: small">
+          Here's a (massively abbreviated) list of things I've built over the
+          years:
+        </p>
+      </div>
+      <div data-mi="hn" class="window tall">
+        <div class="header">
+          <button onclick="changeTheme('#0A100D', '#D6D5C9', '#B9BAA3')">
+            ≡
+          </button>
+          <small>Project: HN</small>
+        </div>
+        <p style="font-size: small">
+          <a class="outlink-w" href="https://z.Aditya.cx/g/hn"
+            >HN is a minimal virtual currency</a
+>, designed for the Hack Club community. <br /><br />
+          Originally a Postgres-backed GraphQL API, it's now evolved into an
+          Ethereum-compatible PoS-based blockchain implementation, with a
+          GraphQL frontend written in Golang.
+          <br /><br />
+          Hundreds of hackers and <b>dozens</b> of apps ranging from joke AI
+          machines to casino have been built on top of the platform, and I look
+          forward to its growth in the future.
+        </p>
+      </div>
+      <div data-mi="work" class="window tall">
+        <div class="header">
+          <button onclick="changeTheme('#F7FFF7', '#292F36', '#4ECDC4')">
+            ≡
+          </button>
+          <small>Currently:</small>
+        </div>
+        <p style="font-size: small">
+          Right now, I work at
+          <a class="outlink-w" href="https://petcodeusa.com">PetCode</a>,
+          helping to create the future of pet ownership for hundreds of
+          thousands across the US, build machine learning tools for millions of
+          customers at
+          <a class="outlink-w" href="https://bentoml.ai">BentoML</a>, scale the
+          world's largest community of high school hackers at
+          <a class="outlink-w" href="https://hackclub.com">Hack Club</a>, run
+          workshops and events for thousands at collegiate hackathons and tech
+          conferences worldwide, and a
+          <a class="outlink-w" href="/kitchensink.pdf">bunch of other things</a>
+          that I can't put into one modal.
+        </p>
+      </div>
+      <div data-mi="idyllic" class="window tall">
+        <div class="header">
+          <button onclick="changeTheme('#0A100D', '#D6D5C9', '#B9BAA3')">
+            ≡
+          </button>
+          <small>Project: Idyllic</small>
+        </div>
+        <p style="font-size: small">
+          <a class="outlink-w" href="https://z.Aditya.cx/g/hn"
+            >Idyllic is a programming language</a
+>
+          for writing performant web services. <br /><br />
+          It performs up to 2.5x better than an equivalent Express app on
+          average, using 1.5x less boilerplate in example benchmarks, and ships
+          with a CLI and two compiler components. Idyllic also hit the front
+          page of r/ProgrammingLanguages on launch!
+        </p>
+      </div>
+      <div data-mi="exercism" class="window tall">
+        <div class="header">
+          <button onclick="changeTheme('#0A100D', '#D6D5C9', '#B9BAA3')">
+            ≡
+          </button>
+          <small>Project: Exercism</small>
+        </div>
+        <p style="font-size: small">
+          <a class="outlink-w" href="https://exercism.io">Exercism</a> is one of
+          the world's largest CS Education platforms, with hundreds of thousands
+          of users. <br /><br />
+          I helped lead JavaScript curriculum and infrastructure development in
+          my freshman year of high school, focusing on writing internal tools
+          for the third iteration of our platform. Exercism gained popularity
+          for its unique spin on CS theory, bringing scalable mentorship and
+          problem-first packages to the masses.
+          <br /><br />
+        </p>
+      </div>
+      <div data-mi="legist" class="window tall">
+        <div class="header">
+          <button onclick="changeTheme('#0A100D', '#D6D5C9', '#B9BAA3')">
+            ≡
+          </button>
+          <small>Project: Legist</small>
+        </div>
+        <p style="font-size: small">
+          <a class="outlink-w" href="https://devpost.com/software/legist"
+            >Legist is a web platform </a
+>that allows users to digest government policy efficiently.<br /><br />
+          Legist uses near-shot categorization to sort articles and papers, BERT
+          to identify entities in text and create a public data graph from
+          government sources, and summarization using DistilBART, all served on
+          top of BentoML.<br /><br />
+        </p>
+      </div>
+    </div>
+
+    <div id="content">
+      <h1 data-ob="11">Dear visitor,</h1>
+      <p>
+        <a data-o="11" href="">Hello</a> there.
+        <span data-ob="11"
+          >It's so nice to finally <a data-mo="11m" href="">meet</a> you.</span
+>
+        <span data-ob="a12">I'm sorry to <a data-o="13" href="">hear</a> that.</span>
+        <span data-ob="b12"
+          >That's <a data-o="13" href="">great</a>—I'm so happy for you!</span
+>
+        <span data-ob="13">
+          <br /><br />It's a fast moving <a data-o="14" href="">world</a> out there.
+        </span>
+
+        <span data-ob="14"
+          ><br /><br />
+          Have you ever wondered what it'd be like to
+          <a data-o="breath" href="">slow</a> down?</span
+>
+
+        <span data-ob="breath">To take a <a data-o="16" href="">breather</a>? </span>
+
+        <span data-ob="16"
+          ><br /><br />Me, too. In tech, it's too easy to get
+          <a data-o="17" href="">bogged</a> down with speed.</span
+>
+
+        <span data-ob="17"
+          >Constant iteration, Lighthouse results, Jira stats:
+          <a data-o="18" href="">why</a>?</span
+>
+
+        <span data-ob="18"
+          ><br /><br />What happened to <a data-o="19" href="">storytelling</a>?</span
+>
+
+        <span data-ob="19"
+          >What happened to the <a data-o="110" href="">ideas</a> behind the
+          façade?</span
+>
+
+        <span data-ob="110"
+          ><br /><br />This website isn't a duct-taped
+          <a data-o="111" href="">resumé</a>.
+        </span>
+
+        <span data-ob="111">It's a world to <a data-o="112" href="">discover</a>.</span>
+
+        <span data-ob="112"
+          ><br /><br />Like the world we live in, there is often
+          <a data-o="113" href="">more</a> than meets the eye.</span
+>
+
+        <span data-ob="113"
+          >Welcome to my strange
+          <a data-o="114" onclick="changeTheme('#090c08', '#f3e9dc', '#16bac5')" href=""
+            >home</a
+>.</span
+>
+
+        <span data-ob="114"
+          ><br /><br />Welcome to my space.
+          <br />
+          <br />
+          <svg
+            width="170"
+            height="100"
+            viewbox="0 0 284 203"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              id="signature"
+              d="M65.06707000732422,74.28753662109375 L65.49517059326172,73.28861999511719 L68.91999053955078,66.29630279541016 L77.62471771240234,46.88901901245117 L85.6159439086914,28.337947845458984 L88.89806365966797,21.34562110900879 L90.03966522216797,19.34781265258789 L90.61046600341797,19.06241226196289 L91.323974609375,20.48941421508789 L92.32289123535156,25.055831909179688 L92.7509765625,28.195247650146484 L94.0352783203125,39.896690368652344 L96.03309631347656,47.1744270324707 L97.17469787597656,50.3138313293457 L99.8860092163086,56.449951171875 L100.4568099975586,57.30615234375 L99.74330139160156,55.4510498046875 L95.89039611816406,50.3138313293457 L89.61156463623047,45.17661666870117 L81.7630386352539,41.894500732421875 L73.34370422363281,41.323699951171875 L64.63897705078125,43.46421432495117 L56.076934814453125,48.8868293762207 L49.2273063659668,56.3072624206543 L47.08679962158203,60.160179138183594 L46.3733024597168,69.86381530761719 L50.51161575317383,73.14591979980469 L59.78715133666992,72.71783447265625 L74.62800598144531,66.43901062011719 L83.9035415649414,60.8736686706543 L116.29657745361328,37.47078323364258 M118.86518096923828,48.3160285949707 L119.72138214111328,46.74631881713867 L120.57759857177734,45.03391647338867 L122.00458526611328,39.611289978027344 L121.29108428955078,37.613487243652344 L118.86518096923828,36.89998245239258 L114.01336669921875,38.04158401489258 L109.01884460449219,41.038299560546875 L105.30863189697266,45.03391647338867 L103.1681137084961,49.4576301574707 L102.8827133178711,52.8824462890625 L104.4524154663086,55.879150390625 L106.87834167480469,57.1634635925293 L112.01556396484375,54.5948600769043 L117.01007080078125,48.1733283996582 L120.86298370361328,39.753990173339844 L123.71701049804688,30.76385498046875 L124.71590423583984,26.625545501708984 L125.71481323242188,20.20401382446289 L125.71481323242188,18.77701187133789 L125.42941284179688,18.77701187133789 L124.14511108398438,22.915328979492188 L123.43161010742188,25.626638412475586 L122.14730072021484,36.04378128051758 L122.14730072021484,39.325889587402344 L124.00240325927734,46.17551803588867 L124.85860443115234,47.31711959838867 L128.85423278808594,46.74631881713867 L131.28013610839844,43.46421432495117 L133.2779541015625,39.611289978027344 L134.13414001464844,37.613487243652344 L134.27684020996094,37.328086853027344 L134.27684020996094,37.47078323364258 L134.27684020996094,37.89888381958008 L134.27684020996094,39.896690368652344 L134.27684020996094,41.894500732421875 L134.84765625,44.46311569213867 L135.8465576171875,46.03281784057617 L139.98486328125,45.89011764526367 L144.26589965820312,42.322601318359375 L148.26148986816406,36.32918167114258 L151.54360961914062,29.33685302734375 L153.54141235351562,22.487228393554688 L154.11221313476562,18.06351089477539 L154.11221313476562,16.493797302246094 L153.96951293945312,16.351097106933594 L153.82681274414062,18.06351089477539 L153.39871215820312,20.63212013244629 L152.25711059570312,26.910945892333984 L151.54360961914062,36.47188186645508 L152.1144256591797,39.611289978027344 L153.54141235351562,40.182090759277344 L157.25161743164062,37.613487243652344 L160.6764373779297,33.47516632080078 L162.95965576171875,30.050350189208984 L163.95855712890625,28.480648040771484 L164.24395751953125,28.195247650146484 L164.38665771484375,28.480648040771484 L164.38665771484375,28.908748626708984 L164.52935791015625,30.47845458984375 L164.81475830078125,32.33356475830078 L165.38555908203125,33.47516632080078 L168.8103790283203,32.90436935424805 L172.3778839111328,30.33575439453125 L175.66001892089844,27.767147064208984 L177.6578369140625,26.340139389038086 L178.7994384765625,26.482839584350586 L179.65560913085938,27.909847259521484 L180.08372497558594,29.622249603271484 L180.08372497558594,38.61238479614258 L178.6566925048828,46.03281784057617 L176.08811950683594,54.4521484375 L173.0913848876953,61.016380310058594 L171.6643829345703,62.871482849121094 L169.80929565429688,63.299583435058594 L169.5238800048828,61.587181091308594 L170.5227813720703,56.449951171875 L173.8048858642578,48.0306282043457 L175.66001892089844,45.03391647338867 L182.93772888183594,36.04378128051758 L188.21766662597656,31.04925537109375 L193.64027404785156,27.339046478271484 L194.78187561035156,26.625545501708984 L195.06727600097656,26.625545501708984 L195.06727600097656,26.768239974975586 L191.07167053222656,30.90655517578125 L187.21875,35.33027267456055 L184.5074462890625,39.325889587402344 L183.508544921875,41.609100341796875 L183.508544921875,42.465301513671875 L183.6512451171875,42.608001708984375 L186.36253356933594,40.895599365234375 L189.9300537109375,37.75618362426758 L194.63916015625,33.33246612548828 L195.2099609375,32.90436935424805 L195.92347717285156,32.61896514892578 L196.35159301757812,33.47516632080078 L196.92239379882812,38.04158401489258 L199.0629119873047,42.893402099609375 L201.6315155029297,44.60581588745117 L209.4800262451172,43.60691452026367 M135.9892578125,29.33685302734375 L140.4129638671875,28.337947845458984 L144.26589965820312,27.767147064208984 L162.10345458984375,24.056930541992188 L169.2384796142578,22.487228393554688 L182.5096435546875,19.34781265258789 L196.4943084716797,13.497087478637695 M142.553466796875,15.637596130371094 M132.70713806152344,22.915328979492188 M132.849853515625,22.915328979492188 M136.274658203125,25.626638412475586 L136.7027587890625,24.342330932617188 L136.845458984375,23.771530151367188 L136.9881591796875,22.915328979492188 L136.9881591796875,23.058029174804688 L136.9881591796875,23.200729370117188"
+            />
+          </svg>
+        </span>
+      </p>
+      <p>
+        I'm
+
+        <a
+          onclick="changeTheme('#0A100D', '#D6D5C9', '#B9BAA3')"
+          data-wo="21m"
+          data-o="21 11" href=""
+          >Aditya</a
+>.
+
+        <span data-ob="21"
+          >8 years ago, I awoke in a strange new world: I learned how to
+          <a data-o="22" href="">code</a>.
+        </span>
+        <span data-ob="22"
+          ><br /><br />Web development in 2013 was a field fraught with
+          <a data-o="23" href="">difficulty</a>—documentation was almost nonexistent,
+          GitHub had barely gained traction, and <i>AngularJS</i> was seen as
+          the pinnacle of DX.</span
+>
+        <span data-ob="23">
+          <br /><br />Programming was seen as a niche field; one where the
+          default experience was working in Big Tech, with no external supports
+          or interest from young people—it was <a data-o="24" href="">isolating</a>, to
+          say the least. <br
+        /></span>
+        <span data-ob="24">
+          <br />
+          In 2018, all that changed: years after starting to code, I finally
+          found a community of people like me at
+          <a class="outlink" href="https://2018.hackthenorth.com/"
+            >Hack the North</a
+>. Hackathons fundamentally <a data-o="25" href="">changed</a> how I thought
+          about programming—it's not just a research field or a hobby, it's a
+          <i>superpower</i>. <br /><br
+        /></span>
+        <span data-ob="25">
+          Not long after that, I scored my first internship at a mid-stage
+          startup, won an incubation summit, and got
+          <a data-o="26" href="">launched</a> into the
+          <a href="https://hackclub.com/">hackerverse</a>.<br /><br />
+        </span>
+        <span data-ob="26">
+          Today, I work on the tools and communities that I wish I had when I
+          was starting out all those years ago.
+        </span>
+      </p>
+      <p>
+        I <span class="on" data-cb="31"><a data-o="31 11" href="">hack</a>.</span
+><span data-ob="31"
+          ><a data-o="32" href="">build things</a>,
+          <a data-wo="work" data-o="34" href="">lead teams</a>, and
+          <a data-wo="ghost" data-o="35" href="">think about the future</a>.</span
+>
+
+        <span data-ob="32">
+          <br />
+          <br />
+          I'm a software engineer—and hacker at heart—because I believe that
+          careful creation can lead to exponential ideation.</span
+>
+
+        <span data-ob="32"
+          ><br />
+          <br />I write code so that the <i>next generation of makers</i> can do
+          it even better: transforming <i>human capital</i> into computational &
+          social capital is the throughline for
+          <a class="outlink" href="/experiences.pdf">all my experiences</a>: I'm
+          especially proud of my work with
+          <a onclick="changeTheme('#E6E1C5', '#395c6b', '#94778B')" data-wo="hn" href=""
+            >HN</a
+>,
+          <a
+            onclick="changeTheme('#B4CDED', '#0D1821', '#344966')"
+            data-wo="idyllic" href=""
+            >Idyllic</a
+>,
+          <a
+            onclick="changeTheme('#0A2463', '#FFFAFF', '#3E92CC')"
+            data-wo="exercism" href=""
+            >Exercism</a
+>, and
+          <a
+            onclick="changeTheme('#77CBB9', '#220C10', '#506C64')"
+            data-wo="legist" href=""
+            >Legist</a
+>. You can find the complete list of my projects over at my
+          <a href="https://z.aditya.cx/g/" class="outlink">GitHub</a>.
+        </span>
+      </p>
+      <p>
+        You can find me at
+        <a data-o="51 11" onclick="changeTheme('#230007', '#DAD7CD', '#D98324')" href=""
+          >@Adityaosaur</a
+>
+        on the rest of the Internet.
+        <span data-ob="51"
+          >I'm most <a data-o="52" href="">active</a> on
+          <a class="outlink" href="https://z.Aditya.cx/t">Twitter</a> and
+          <a class="outlink" href="https://z.Aditya.cx/g">GitHub.</a>
+        </span>
+        <br />
+        <br />
+        <span data-ob="52"
+          >You can find <a data-wo="ghost" href="">my digital garden</a> at
+          <a class="outlink" href="https://posts.Aditya.cx">posts.Aditya.cx</a>,
+          where I write about music, exponential tech, startups, and the
+          <a data-o="53" href="">future</a> that I'm building with friends across the
+          world.</span
+>
+        <br />
+        <br />
+        <span data-ob="53">
+          I'm always open to chatting about new ideas—find my calendly at
+          <a class="outlink" href="https://z.Aditya.cx/m">z.aditya.cx/m.</a>
+        </span>
+      </p>
+    </div>
+    <script src="asset/js/ghost.js"></script>
+    <script src="asset/js/theme.js"></script>
+    <script src="asset/js/drag.js"></script>
+    <script src="asset/js/interactions.js"></script>
+    <script src="asset/js/wm.js"></script>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/cmu-serif");
+
+      a:visited {
+        color: var(--main);
+      }
+
+      small {
+        font-style: italic;
+      }
+
+      .header > button {
+        background-color: var(--bg);
+        color: var(--main);
+        border: none;
+      }
+
+      .header > button:hover {
+        cursor: pointer;
+      }
+
+      .outlink {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 50%,
+          var(--accent) 50%
+        );
+        display: inline;
+        margin: 0;
+        text-decoration: none;
+        transition: all 0.5s ease-in;
+      }
+
+      .outlink:hover {
+        background: var(--accent);
+      }
+
+      #circle svg {
+        height: 11rem;
+        color: var(--main);
+        width: auto;
+        padding: 0;
+
+        -webkit-animation-name: rotate;
+        -moz-animation-name: rotate;
+        -ms-animation-name: rotate;
+        -o-animation-name: rotate;
+        animation-name: rotate;
+        -webkit-animation-duration: 5s;
+        -moz-animation-duration: 5s;
+        -ms-animation-duration: 5s;
+        -o-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -ms-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+        -ms-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        animation-timing-function: linear;
+      }
+
+      #pathpath {
+        color: var(--main);
+        fill: var(--main);
+      }
+
+      @-webkit-keyframes rotate {
+        from {
+          -webkit-transform: rotate(360deg);
+        }
+        to {
+          -webkit-transform: rotate(0);
+        }
+      }
+      @-moz-keyframes rotate {
+        from {
+          -moz-transform: rotate(360deg);
+        }
+        to {
+          -moz-transform: rotate(0);
+        }
+      }
+      @-ms-keyframes rotate {
+        from {
+          -ms-transform: rotate(360deg);
+        }
+        to {
+          -ms-transform: rotate(0);
+        }
+      }
+      @-o-keyframes rotate {
+        from {
+          -o-transform: rotate(360deg);
+        }
+        to {
+          -o-transform: rotate(0);
+        }
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(360deg);
+        }
+        to {
+          transform: rotate(0);
+        }
+      }
+
+      html {
+        --main: #f3e9dc;
+        --bg: #090c08;
+        --accent: #ff7d00;
+        --main-font: "CMU Serif", Georgia, Times, "Times New Roman", serif;
+      }
+      a {
+        text-decoration: underline;
+        color: var(--main);
+      }
+
+      span {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transform: scaleY(0);
+        /* display: none; */
+        transform-origin: top;
+        transition: all 0.5s ease;
+      }
+
+      span.indicator {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleY(1);
+        height: 2px;
+        width: 2px;
+        border: 0.5px solid var(--main);
+
+        display: inline-block;
+      }
+
+      span.active {
+        background-color: var(--main);
+      }
+
+      span.there {
+        position: relative;
+        display: inline;
+        visibility: hidden;
+        opacity: 0;
+      }
+      h1 {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.25s ease-in-out;
+      }
+      h1.on {
+        visibility: visible;
+        opacity: 1;
+      }
+      span.on {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        display: inline;
+        transform: scaleY(1);
+        /* display: inline; */
+      }
+
+      .off {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      div.on {
+        visibility: visible;
+        opacity: 1;
+        /* transform: scaleY(1); */
+      }
+
+      div.off {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      ::selection {
+        background-color: var(--accent);
+        color: var(--main);
+      }
+
+      .modal {
+        transform-origin: top;
+        transition: all 0.5s ease;
+
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+
+        left: 50%;
+        transform: translateX(-50%);
+        /* top: 50%;
+        transform: translateY(-50%); */
+        z-index: 999;
+
+        background-color: var(--main);
+        color: var(--bg);
+        padding: 2rem;
+      }
+
+      .window {
+        transform-origin: top;
+        transition: all 0.5s ease;
+        border: 1px solid var(--bg);
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        resize: both;
+        /* top: 50%;
+        transform: translateY(-50%); */
+        z-index: 999;
+
+        background-color: var(--main);
+        color: var(--bg);
+        padding: 2rem;
+        width: 20rem;
+        height: 9rem;
+
+        overflow-y: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+      }
+
+      .outlink-w {
+        background-color: var(--bg);
+        color: var(--main);
+        transition: all 0.25s ease;
+        text-decoration: none;
+      }
+
+      .outlink-w:hover {
+        cursor: pointer;
+        background-color: var(--main);
+        color: var(--bg);
+      }
+
+      .window::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+
+      .bgroup > p {
+        visibility: visible;
+        display: inline;
+        opacity: 1;
+        background-color: var(--accent);
+        transition: all 0.5s ease;
+        color: var(--main);
+        border: none;
+        padding: 0.25rem;
+        font-size: smaller;
+        display: inline;
+      }
+
+      .bgroup > p:hover {
+        background-color: var(--bg);
+        cursor: pointer;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--main);
+        font-family: var(--main-font);
+        transition: all 0.5s ease;
+      }
+
+      #content {
+        margin: 10% 30% 10% 30%;
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (max-width: 1200px) {
+        #content {
+          margin: 8% 4% 0 4%;
+          width: 90vw;
+        }
+      }
+
+      #signature {
+        fill: var(--main);
+      }
+
+      .tall {
+        height: max-content;
+      }
+    </style>
+  </body>
+</html>
